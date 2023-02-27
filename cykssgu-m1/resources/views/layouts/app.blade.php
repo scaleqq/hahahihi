@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,68 +14,44 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
+
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 </head>
+
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <section>
+            <div class="container $zindex-fixed">
+                <header class=" flex-wrap align-itms-center justify-content-center d-flex justify-content-md-between mb-md-0 md-auto py-3 border-bottom">
+                    <a href="" class="d-flex justify-content-centr align-itms-center m-2">
+                        <a href="{{route('home')}}"><span class="fs-2"><img src="../resources/views/img/logo.png" alt="*"></span></a>
+                    </a>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
-
+                    <ul class=" nav d-flex col-lg-5 fs-3 align-itms-center">
+                        <li><a href="{{route('catalog')}}" class="nav-link px-3 link-dark">Каталог</a></li>
+                        <li><a href="{{route('aboutus')}}" class="nav-link px-3 link-dark">О нас</a></li>
+                        <li><a href="{{route('wheretofind')}}" class="nav-link px-3 link-dark">Где нас найти</a></li>
                     </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
 
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
+                    @if (!Auth()->user())
+                        <div class="d-flex align-itms-center col-lg-4">
+                            <a href="{{route('register')}}"><button class="submit btn btn-outline-dark mx-3 fs-4">Зарегистрироваться</button></a>
+                            <a href="{{route('login')}}"><button class="submit btn btn-dark fs-4">Войти</button></a>
+                        </div>
+                    @else
+                    <a href=""><button class="submit btn btn-dark fs-4">Выйти</button></a>
+                    @endif
+                </header>
             </div>
-        </nav>
+        </section>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
 </body>
+
 </html>
