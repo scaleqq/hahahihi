@@ -13,14 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/map', function () {
+    return view('map');
+});
+Route::get('/katalog', function () {
+    return view('katalog');
+});
+Route::get('/about', function () {
+    return view('about');
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/aboutus',[AboutusController::class,'aboutus'])->name('aboutus');
-Route::get('/catalog',[HomeController::class,'catalog'])->name('catalog');
-Route::get('/wheretofind',[HomeController::class,'wheretofind'])->name('wheretofind');
+
+Route::get('/katalog',[App\Http\Controllers\Group::class, 'GroupUs' ])->name('katalog');
+
+Route::get('/about',[App\Http\Controllers\AboutUs::class, 'slider' ])->name('about');
 

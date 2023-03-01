@@ -1,0 +1,1 @@
+[Mon Feb 27 19:39:53.413363 2023] [php:error] [pid 40786] [client 192.168.2.142:50990] PHP Fatal error:  Cannot declare class Controllers\\Group, because the name is already in use in /srv/users/astdvyrn/fgaxnba-m1/app/Http/Controllers/Group.php on line 0, referer: http://fgaxnba-m1.wsr.ru/public/map

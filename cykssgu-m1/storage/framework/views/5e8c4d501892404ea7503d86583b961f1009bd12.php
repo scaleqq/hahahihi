@@ -130,4 +130,4 @@
         </div>
     </body>
 </html>
-<?php /**PATH /srv/users/ygaxedir/cykssgu-m1/resources/views/welcome.blade.php ENDPATH**/ ?>
+<?php /**PATH /srv/users/astdvyrn/fgaxnba-m1/resources/views/welcome.blade.php ENDPATH**/ ?>
