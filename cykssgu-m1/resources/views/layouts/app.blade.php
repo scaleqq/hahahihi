@@ -20,11 +20,11 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                    <img src="../resources/views/img/logo.png">
+                    <img src="../resources/views/img/logo.jpg">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                            <li class="nav-item"> <a href="glavnaya" class="nav-link"> Главная страница </a> </li>
+                            <li class="nav-item"> <a href="about" class="nav-link"> Главная страница </a> </li>
                             <li class="nav-item"> <a href="map" class="nav-link"> Где нас найти </a> </li>
                             <li class="nav-item"> <a href="katalog" class="nav-link"> Каталог </a> </li>
                     </ul>

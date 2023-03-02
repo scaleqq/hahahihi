@@ -27,7 +27,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/katalog',[App\Http\Controllers\Group::class, 'GroupUs' ])->name('katalog');
+Route::get('/katalog',[App\Http\Controllers\ShowController::class, 'shows' ])->name('katalog');
 
-Route::get('/about',[App\Http\Controllers\AboutUs::class, 'slider' ])->name('about');
+Route::get('/about',[App\Http\Controllers\ShowController::class, 'slider' ])->name('about');
 

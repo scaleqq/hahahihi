@@ -8,3 +8,8 @@
 .card{
     margin-bottom: 25px;
 }
+.carousel-item active{
+    display: flex;
+    height: 250px;
+    width: 250px;
+}

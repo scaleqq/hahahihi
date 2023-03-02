@@ -6,20 +6,11 @@
         @if ($loop -> first)
 
       <div class="carousel-item active">
-        <img src="{{b->img}}" class="d-block w-100" alt="{{b->img}}">
+        <img src="{{$b->img}}" class="d-block w-100" alt="{{$b->img}}" width="60%" height="40%">
       </div>
       @else
       <div class="carousel-item">
-        <img src="{{b->img}}" class="d-block w-100" alt="{{b->img}}">
-      </div>
-      <div class="carousel-item">
-        <img src="{{b->img}}" class="d-block w-100" alt="{{b->img}}">
-      </div>
-      <div class="carousel-item">
-        <img src="{{b->img}}" class="d-block w-100" alt="{{b->img}}">
-      </div>
-      <div class="carousel-item">
-        <img src="{{b->img}}" class="d-block w-100" alt="{{b->img}}">
+        <img src="{{$b->img}}" class="d-block w-100" alt="{{$b->img}}" width="60%" height="40%">
       </div>
       @endif
 
