@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,10 @@ Route::get('/katalog',[App\Http\Controllers\ShowController::class, 'shows' ])->n
 
 Route::get('/about',[App\Http\Controllers\ShowController::class, 'slider' ])->name('about');
 
+Route::get('/katalog/{id}',[App\Http\Controllers\ShowController::class, 'productcards' ]);
+
+Route::post('/cart/add', 'CartController@addItem')->name('cart.add');
+
+Route::get('/cart', 'CartController@showCart')->name('cart.show');
+
+Route::post('/cart/remove/{productId}', 'CartController@removeItem')->name('cart.remove');

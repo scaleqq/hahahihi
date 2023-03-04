@@ -10,6 +10,7 @@
             </style>
             <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $b): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <div class="card" style="width: 18rem;">
+            <a class="catalog-item-links" href="/public/katalog/<?php echo e($b->id); ?>"></a>
                 <img class="card-img-top" src="<?php echo e($b->img); ?>" alt="Card image cap">
                 <div class="card-body">
                   <h5 class="card-title"> <?php echo e($b->name); ?>

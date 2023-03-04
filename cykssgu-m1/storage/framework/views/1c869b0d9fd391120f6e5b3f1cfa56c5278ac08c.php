@@ -1,15 +1,29 @@
 <?php $__env->startSection('content'); ?>
+<div class="logo1">
+                   <center> <img src="../resources/views/img/logo.jpg">
+</div>
+<div class="slogan"><center><h1>Добавьте веселья в свою жизнь</h1></div>
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $b): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <?php if($loop -> first): ?>
-
       <div class="carousel-item active">
-        <img src="<?php echo e($b->img); ?>" class="d-block w-100" alt="<?php echo e($b->img); ?>" width="60%" height="40%">
+      <style> .carousel-item{
+    text-align: center;
+    align-items: center;
+}
+.carousel-item > img{
+    width: 60% !important;
+    border-radius: 5px;
+    margin-left: 20%;
+    height: 600px; 
+}
+            </style>
+        <img src="<?php echo e($b->img); ?>" class="d-block w-100" alt="<?php echo e($b->img); ?>">
       </div>
       <?php else: ?>
       <div class="carousel-item">
-        <img src="<?php echo e($b->img); ?>" class="d-block w-100" alt="<?php echo e($b->img); ?>" width="60%" height="40%">
+        <img src="<?php echo e($b->img); ?>" class="d-block w-100" alt="<?php echo e($b->img); ?>">
       </div>
       <?php endif; ?>
 
